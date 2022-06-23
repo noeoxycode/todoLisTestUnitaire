@@ -4,6 +4,16 @@ import java.util.Scanner;
 public class Items {
     private String name;
     private String content;
+    private Date addDate;
+
+    @Override
+    public String toString() {
+        return "Items{" +
+                "name='" + name + '\'' +
+                ", content='" + content + '\'' +
+                ", addDate=" + addDate +
+                '}';
+    }
 
     public String getName() {
         return name;
@@ -17,7 +27,7 @@ public class Items {
         return addDate;
     }
 
-    private Date addDate;
+
 
 
     public Items(String name,String content){

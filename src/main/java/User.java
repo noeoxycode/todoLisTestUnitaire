@@ -18,6 +18,13 @@ public class User {
         this.todolist = new Todolist();
     }
 
+    public User() {
+        this.name = "default";
+        this.surname = "default";
+        this.password = "default";
+        this.todolist = new Todolist();
+    }
+
     public String getName() {
         return name;
     }
