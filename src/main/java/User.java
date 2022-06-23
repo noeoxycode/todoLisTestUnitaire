@@ -5,12 +5,17 @@ public class User {
     private String surname;
     private String password;
     private Todolist todolist;
+    public void setTodolist(Todolist todolist) {
+        this.todolist = todolist;
+    }
+
+
 
     public User(String name, String surname, String password) {
         this.name = name;
         this.surname = surname;
         this.password = password;
-        this.todolist = null;
+        this.todolist = new Todolist();
     }
 
     public String getName() {

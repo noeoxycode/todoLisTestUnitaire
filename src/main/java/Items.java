@@ -4,6 +4,19 @@ import java.util.Scanner;
 public class Items {
     private String name;
     private String content;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public Date getAddDate() {
+        return addDate;
+    }
+
     private Date addDate;
 
 
@@ -18,17 +31,17 @@ public class Items {
         this.addDate=new Date();
     }
 
-    public boolean verifContentlenght(String content){
+    static boolean verifContentlenght(String content){
         return content.length()<1000;
     }
 
-    public Items createItem(){
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+    static Items createItem(){
+        Scanner scan = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Quel est le nom de l'item ?");
-        String name = myObj.nextLine();
+        String name = scan.nextLine();
         System.out.println("Quel est la description de l'item (peut être vide) ?");
-        String content = myObj.nextLine();
-        if (!this.verifContentlenght(content)){
+        String content = scan.nextLine();
+        if (!Items.verifContentlenght(content)){
             return null;
         }
         Items items = new Items(name, content);
